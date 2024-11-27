@@ -1,0 +1,74 @@
+ @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+a {
+  color: black !important;
+}
+
+.brand-logo {
+  font-family: "Righteous", cursive;
+}
+
+.mycard {
+  margin-top: 40px;
+}
+.auth-card h2 {
+  font-family: "Righteous", cursive;
+}
+.auth-card {
+  padding: 20px;
+  text-align: center;
+  max-width: 400px;
+  margin: 10px auto;
+  background-color: hsl(60, 100%, 50%);
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 10px 20px #888888;
+}
+.auth-card h5 {
+  font-family: "Righteous", cursive;
+}
+::placeholder {
+  color: rgba(80, 72, 3, 0.979);
+}
+
+.input-field input[type="text"]:focus {
+  border-bottom: 1px solid black !important;
+  box-shadow: 0 1px 0 0 black !important;
+  background-color: #ffea00;
+  color: black;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+.input-field input[type="password"]:focus {
+  border-bottom: 1px solid black !important;
+  box-shadow: 1px black !important;
+  background-color: #ffea00;
+  color: black;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+.input-field input[type="tel"]:focus {
+  border-bottom: 1px solid black !important;
+  box-shadow: 1px black !important;
+  background-color: #ffea00;
+  color: black;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+
+ .icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+} 
+
+label{
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+}
+
+
