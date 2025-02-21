@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
 import AlgoliaPlaces from 'algolia-places-react';
 
-function Home(props){
+function Home(props) {
 
   const [citySelected, setCitySelected] = useState('');
   const { handleSubmit } = useForm();
@@ -57,7 +56,7 @@ function Home(props){
             </form>
           </div>
           <div className="row center">
-             {/* <a
+            {/* <a
               href="http://materializecss.com/getting-started.html"
               id="download-button"
               className="btn-large waves-effect waves-light orange"
@@ -65,9 +64,9 @@ function Home(props){
               Get Started
             </a> 
              */}
-             
-            <div className="sm:py-4 lg:self-center"><img className="p-4 w-full sm:w-3/4 mx-auto lg:w-auto" src="https://blush.design/api/download?shareUri=XjBBvmxsvVzVKA2U&c=Clothing_0%7Eff4b33-0.1%7Eff8333&w=800&h=800&fm=png" alt="Rooms"/></div>
-          
+
+            <div className="sm:py-4 lg:self-center"><img className="p-4 w-full sm:w-3/4 mx-auto lg:w-auto" src="https://blush.design/api/download?shareUri=XjBBvmxsvVzVKA2U&c=Clothing_0%7Eff4b33-0.1%7Eff8333&w=800&h=800&fm=png" alt="Rooms" /></div>
+
           </div>
           <br />
           <br />
