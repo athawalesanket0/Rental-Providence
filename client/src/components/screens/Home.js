@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import AlgoliaPlaces from 'algolia-places-react';
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import AlgoliaPlaces from "algolia-places-react";
 
 function Home(props) {
-
-  const [citySelected, setCitySelected] = useState('');
+  const [citySelected, setCitySelected] = useState("");
   const { handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data)
+  const onSubmit = (data) => console.log(data);
   return (
     <>
       <div className="section no-pad-bot" id="index-banner">
@@ -23,50 +22,43 @@ function Home(props) {
             </h5>
           </div>
           <div className="flex items-center">
-            <form
-              onSubmit={handleSubmit(onSubmit)}
-              className="flex flex-col"
-            >
+            <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col">
               <AlgoliaPlaces
                 placeholder="Enter a City"
                 options={{
                   appId: process.env.REACT_APP_APP,
                   apiKey: process.env.REACT_APP_APPK,
-                  // language: "sv",
                   countries: ["in"],
-                  type: 'city',
-                  // Other options from https://community.algolia.com/places/documentation.html#options
+                  type: "city",
                 }}
                 onChange={({ suggestion }) => {
-                  let state = suggestion.hasOwnProperty('administrative')
+                  let state = suggestion.hasOwnProperty("administrative")
                     ? suggestion.administrative
                     : suggestion.hit.administrative[0];
                   setCitySelected(`${suggestion.name}, ${state}`);
                 }}
                 onError={({ message }) =>
-                  console.log('Sorry, error with the API! ❌')
+                  console.log("Sorry, error with the API! ❌")
                 }
               />
 
-              <input
-                //className="mt-4 sm:mt-0 bg-themeYellow mx-1 px-3 py-1 lg:ml-6 lg:text-2xl rounded-lg text-xl text-gray-800 focus:outline-none focus:shadow-outline shadow"
+              <button
+                className="center btn-large waves-effect waves-light orange"
                 type="submit"
                 value="Search"
-              />
+              >
+                Search
+              </button>
             </form>
           </div>
           <div className="row center">
-            {/* <a
-              href="http://materializecss.com/getting-started.html"
-              id="download-button"
-              className="btn-large waves-effect waves-light orange"
-            >
-              Get Started
-            </a> 
-             */}
-
-            <div className="sm:py-4 lg:self-center"><img className="p-4 w-full sm:w-3/4 mx-auto lg:w-auto" src="https://blush.design/api/download?shareUri=XjBBvmxsvVzVKA2U&c=Clothing_0%7Eff4b33-0.1%7Eff8333&w=800&h=800&fm=png" alt="Rooms" /></div>
-
+            <div className="sm:py-4 lg:self-center">
+              <img
+                className="p-4 w-full sm:w-3/4 mx-auto lg:w-auto"
+                src="https://blush.design/api/download?shareUri=XjBBvmxsvVzVKA2U&c=Clothing_0%7Eff4b33-0.1%7Eff8333&w=800&h=800&fm=png"
+                alt="Rooms"
+              />
+            </div>
           </div>
           <br />
           <br />
@@ -78,9 +70,6 @@ function Home(props) {
           <div className="row">
             <div className="col s12 m4">
               <div className="icon-block">
-                <h2 className="center light-blue-text">
-                  <i className="material-icons">Room wala</i>
-                </h2>
                 <h5 className="center">Speeds up development</h5>
 
                 <p className="light">
@@ -94,9 +83,6 @@ function Home(props) {
 
             <div className="col s12 m4">
               <div className="icon-block">
-                <h2 className="center light-blue-text">
-                  <i className="material-icons">Room wala</i>
-                </h2>
                 <h5 className="center">User Experience Focused</h5>
 
                 <p className="light">
@@ -111,9 +97,6 @@ function Home(props) {
 
             <div className="col s12 m4">
               <div className="icon-block">
-                <h2 className="center light-blue-text">
-                  <i className="material-icons">contact us</i>
-                </h2>
                 <h5 className="center">Easy to work with</h5>
 
                 <p className="light">
@@ -134,7 +117,7 @@ function Home(props) {
         <div className="container">
           <div className="row">
             <div className="col l6 s12">
-              <h5 className="white-text">Company Bio</h5>
+              <h5 className="white-text">About</h5>
               <p className="grey-text text-lighten-4">
                 We are a team of college students working on this project like
                 it's our full time job. Any amount would help support and
@@ -142,26 +125,26 @@ function Home(props) {
               </p>
             </div>
             <div className="col l3 s12">
-              <h5 className="white-text">Settings</h5>
+              <h5 className="white-text">Available Properties</h5>
               <ul>
                 <li>
                   <a className="white-text" href="#!">
-                    Link 1
+                    Listing
                   </a>
                 </li>
                 <li>
                   <a className="white-text" href="#!">
-                    Link 2
+                    My Listing
                   </a>
                 </li>
                 <li>
                   <a className="white-text" href="#!">
-                    Link 3
+                    Support
                   </a>
                 </li>
                 <li>
                   <a className="white-text" href="#!">
-                    Link 4
+                    Contact Us
                   </a>
                 </li>
               </ul>
@@ -171,22 +154,22 @@ function Home(props) {
               <ul>
                 <li>
                   <a className="white-text" href="#!">
-                    Link 1
+                    Forum
                   </a>
                 </li>
                 <li>
                   <a className="white-text" href="#!">
-                    Link 2
+                    Events
                   </a>
                 </li>
                 <li>
                   <a className="white-text" href="#!">
-                    Link 3
+                    Blog
                   </a>
                 </li>
                 <li>
                   <a className="white-text" href="#!">
-                    Link 4
+                    Testimonial
                   </a>
                 </li>
               </ul>
@@ -194,19 +177,11 @@ function Home(props) {
           </div>
         </div>
         <div className="footer-copyright">
-          <div className="container">
-            Made by{" "}
-            <a
-              className="orange-text text-lighten-3"
-              href="http://materializecss.com"
-            >
-              Materialize
-            </a>
-          </div>
+          <div className="center container">Copyright @2025</div>
         </div>
       </footer>
     </>
   );
-};
+}
 
 export default Home;

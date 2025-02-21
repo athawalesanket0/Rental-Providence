@@ -21,7 +21,6 @@ const SignIn = () => {
       });
     }
     fetch("http://localhost:3000/login", {
-      //used proxy to interact with http://localhost:3000
       method: "post",
       headers: {
         "Content-Type": "application/json",

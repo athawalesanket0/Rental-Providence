@@ -28,14 +28,13 @@ const Profile = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        //console.log(result)
         setData(result);
         history.push("/profile");
       })
       .catch((err) => {
         console.log(err);
       });
-    return () => {};
+    return () => { };
   }, []);
 
   const submit = (e) => {
@@ -46,11 +45,6 @@ const Profile = () => {
     if (maritalStatus !== "")
       postData = { ...postData, maritalStatus: maritalStatus };
     if (about !== "") postData = { ...postData, about: about };
-    //if(about !== "") postData = {...postData, "about": about}
-
-    // Object.entries(postData).forEach(([key,value]) => {
-    //   console.log(key , value);
-    // })
 
     fetch("http://localhost:3000/updateMe", {
       method: "PATCH",
@@ -61,7 +55,6 @@ const Profile = () => {
       body: JSON.stringify(postData),
     })
       .then((result) => {
-        //console.log(typeof(result.status));
         if (result.status === 500) {
           M.toast({
             html: "Something went wrong",

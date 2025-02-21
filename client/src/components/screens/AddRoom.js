@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { Link, useHistory } from "react-router-dom"
 import { useForm } from 'react-hook-form'
-//import M from "materialize-css"
 import "../../App.css"
 
 const AddRoom = () => {
@@ -54,10 +53,6 @@ const AddRoom = () => {
         console.log(maritalStatus)
         console.log(gender)
         console.log(email)
-        // console.log(typeof(zip))
-        // var temp = parseInt(zip,10)
-        // zip = temp
-        // console.log(typeof(zip))
     }
 
 
@@ -93,7 +88,6 @@ const AddRoom = () => {
                                 value="true"
                                 style={checkstyle}
                                 onChange={(e) => setUtility(e.target.value)}
-                            //className="browser-default"
                             />
                             <label style={{ fontSize: "10px", fontWeight: "normal" }} className="" for="input1">Yes</label>
                         </div>
@@ -105,7 +99,6 @@ const AddRoom = () => {
                                 value="false"
                                 style={checkstyle}
                                 onChange={(e) => setUtility(e.target.value)}
-                            //className="browser-default"
                             />
                             <label style={{ fontSize: "10px", fontWeight: "normal" }} className="" for="input2">No</label>
                             <p style={(utilitiesInc === "") ? { color: "red", display: "block" } : { display: "none" }}>{err.utilityMsg}</p>
